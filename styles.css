@@ -1,0 +1,44 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+#check {
+    display: none;
+}
+
+.box:hover {
+    cursor: pointer;
+}
+
+#check:checked + .box {
+    animation: box 10s ease 0s infinite normal both;
+    cursor: pointer;
+}
+
+
+@keyframes box {
+    25% {
+        transform: translateX(700%) translateY(0);
+        background-color: green;
+    }
+
+    50% {
+        transform: translateX(700%) translateY(300%);
+        background-color: yellow;
+    }
+
+    75% {
+        background-color: red;
+        transform: translateX(0%) translateY(300%);
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
